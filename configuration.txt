@@ -1,0 +1,12 @@
+MaxNumberOfPlayers = 10;
+MinNumberOfPlayers = 2;
+NumberOfLaps = 1;
+MiliSecUpdateTime = 1000;
+MiliSecStartDelay = 10000;
+MiliSecEndWinnerDelay = 300000;
+MiliSecEndDelay = 900000;
+MiliSecResDisplay = 30000;
+PixelsStep = 10;
+DegreeStep = 15;
+WallRedCode = 0;
+GrassRedCode = 92;

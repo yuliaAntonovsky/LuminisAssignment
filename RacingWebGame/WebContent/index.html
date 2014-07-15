@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Simple Racer</title>
+		
+		<link href="GameStyle.css" rel="stylesheet">
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="javaScripts/Managing.js"></script>		
+	</head>
+	<body>
+		<div id="startGame" class="bigDiv">
+			<div class="playerNameForm" align="center">
+				<p class="wellcomeText"> Welcome to the World Best Racing Game </p>
+				<p class="wellcomeText"> In order to start the game you should enter your name </p>
+				<p class="">Your name: <input type="text" id="playerName" name="playerName" maxlength="15" value=""/></p>
+				<div id="errorMsg" class="errorMsg"><p>* To continue to game you have to enter your name</p></div>
+				<p class=""><input type="button" value="SEND" onclick="submitGameForm();"/></p>
+			</div>
+		</div>
+		<div id="playZone" class="bigDiv">
+			<div id="gameSartedMsg" class="gameGreetingMsg">
+				<p class=""> Game already started, you can enjoy watching it. </p>
+				<p class=""> You will be able to login to new round, after it finished. </p>
+			</div>
+			<div id="gameWaitingToStartMsg" class="gameGreetingMsg">
+				<div id="helloPlayer"> Hello, PlayerName, you are waiting to other players to join our game. </div>
+				<div id="playerCarImg"></div>
+				<p class=""> The game will starts in a few seconds. </p>
+			</div>
+			<div id="gamePlayMsg" class="gameGreetingMsg">
+				<p class=""> The game started!!! </p>
+				<p class=""> Hurry up to win !!! </p>
+			</div>
+			<div id="gameFinishedMsg" class="gameGreetingMsg">
+				<p class=""> You finish your game, wait until others finished, and you will get the results. </p>
+				<p class=""> You will be able to login to new round, after current game finished.</p>
+			</div>
+			<canvas id="canvas" width="1000" height="525"></canvas>
+			<div id="info">
+				Player: x <span id="px">0</span> y <span id="py"></span>
+			</div>
+			<script src="javaScripts/Collision.js"></script>
+		</div>
+		<div id="gameResults" class="bigDiv">
+			<p class="wellcomeText"> This round finished with next results: </p>
+			<table id="resultTable" class="resultTable">
+			    <tr>
+			        <th>Name</th>
+			        <th>Status</th>
+			        <th>Place</th>
+			        <th>Time(sec)</th>
+			    </tr>
+			</table>
+		</div>
+	</body>
+</html>
